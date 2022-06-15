@@ -1,0 +1,22 @@
+type Review {
+ id: ID!
+ content: String!
+ createdBy: User!
+ book: Book!
+ rating: Int!
+ createdAt: Timestamp!
+ updatedAt: Timestamp!
+}
+
+input NewReview {
+  createdBy: String!
+  content: String!
+  book: String!
+  createdAt: Timestamp!
+}
+
+input UpdateReview {
+  content: String
+  rating: Int
+  updatedAt: Timestamp!
+}

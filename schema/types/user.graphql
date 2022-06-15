@@ -1,0 +1,29 @@
+type User {
+    id: ID!
+    email: String!
+    password: String!
+    firstName: String!
+    lastName: String!
+    createdAt: Timestamp!
+    updatedAt: Timestamp!
+    role: Role!
+    books: [Book]!
+    isActive: Boolean
+}
+
+input NewUser {
+    email: String!
+    firstName: String!
+    lastName: String!
+    password: String!
+    role: Role
+}
+
+input UpdateUser {
+    email: String
+    firstName: String
+    lastName: String
+    password: String
+    updatedAt: Timestamp!
+}
+

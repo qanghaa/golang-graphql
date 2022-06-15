@@ -1,0 +1,13 @@
+type Mutation {
+  createBook(book: NewBook!): Book!
+  updateBook(id: ID!, changes: UpdateBook!): Book!
+  deleteBook(id: ID!): Book!
+
+  createUser(user: NewUser!): User! 
+  updateUser(id: ID!, changes: UpdateUser!): User!
+  deleteUser(id: ID!, isActive:Boolean!): User!
+
+  createReview(review: NewReview!): Review!
+  updateReview(id: ID!, changes: UpdateReview!): Review!
+  deleteReview(id: ID!): Review!
+}

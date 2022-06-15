@@ -1,0 +1,23 @@
+type Book {
+ id: ID!
+ name: String!
+ description: String!
+ url: String!
+ createdBy: User!
+ releasedAt: Timestamp!
+ rating: Float
+ review: [Review]!
+}
+
+input NewBook {
+  name: String!
+  description: String!
+  url: String!
+  releasedAt: Timestamp!
+}
+
+input UpdateBook {
+  name: String!
+  description: String!
+  url: String!
+}
