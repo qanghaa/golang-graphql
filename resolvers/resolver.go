@@ -17,13 +17,12 @@ type Resolver struct {
 }
 
 func (r *mutationResolver) CreateBook(ctx context.Context, book model.NewBook) (*model.Book, error) {
-	rating := 0
+
 	newBook := model.Book{
 		Name:        book.Name,
 		Description: book.Description,
 		URL:         book.URL,
 		ReleasedAt:  book.ReleasedAt,
-		Rating:      &rating,
 	}
 	_, err := r.DB.Model(&newBook).Insert()
 	if err != nil {
